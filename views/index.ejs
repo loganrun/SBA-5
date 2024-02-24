@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head') %>
+  <!-- <link rel="stylesheet" href="../public/css/custom.css" type="text/css" /> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="<KEY>" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+</head>
+ 
+
+<body style="background-color: #D1D5DB; padding: 0px; margin:0px;">
+  <nav style=" background-color: #192130; display: flex; text-align: center; align-items: center; justify-content: center; color: white; font-size: 20px; height: 75px; width: 100%;">THE HONEY-DO LIST</nav>
+  <div class="container">
+    <div class="row">
+      <ul class="list-group list-group-flush" id="todo">
+        <% todos.forEach(todo => { %>
+          <li class="list-group-item"><%= todo %></li>
+        <% }) %>
+      </ul>
+      </div>
+  </div>
+  <%- include('partials/scripts') %>  
+</body>
+</html>

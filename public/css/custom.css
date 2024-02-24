@@ -1,0 +1,30 @@
+body{
+    /* display: flex;
+    justify-content: center; */
+    /* align-items: center; */
+    background-color: #D1D5DB;
+    padding: 0px;
+    margin:0px;
+}
+
+nav{
+    background-color: #192130;
+    display: flex;
+    text-align: center; 
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    height: 75px;
+    width: 100%;
+}
+
+.btn-custom {
+    background-color: #192130;
+    border-color: #0C1319;  
+  }
+  
+.btn-custom:hover {
+    background-color: #1E2937;
+    border-color: #0C1319;
+  }
