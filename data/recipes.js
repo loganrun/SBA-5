@@ -146,4 +146,6 @@ const recipes = [
       "directions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget leo ac massa tempor ultricies et id odio."
     }
   ]
+
+  module.exports = recipes;
   
