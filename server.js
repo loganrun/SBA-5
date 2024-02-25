@@ -32,11 +32,27 @@ ${time.toLocaleTimeString()}: Received a ${req.method} request to ${req.url}.`
 app.use("/api/users", users);
 app.use("/api/recipes", recipes);
 
+// const fetchCardDataFromAPI = () => {
+//   // Code to fetch card data from API
+//   return {
+//       imageURL: "./images/luis-villasmil-mlVbMbxfWI4-unsplash(1).jpg",
+//       cardTitle: "TO DO",
+//       todos: ["Task 1", "Task 2", "Task 3"]
+//   };
+// };
 
-app.get('/', (req, res) => {
-    const todos = ['Task 1', 'Task 2', 'Task 3']; // Example data
-    res.render('index', { todos });
-  });
+// app.set('view engine', 'ejs');
+
+// app.get('/', (req, res) => {
+//   const cardData = fetchCardDataFromAPI();
+//   res.render('index', cardData);
+// });
+
+
+// app.get('/', (req, res) => {
+//     const todos = ['Task 1', 'Task 2', 'Task 3']; // Example data
+//     res.render('index', { todos });
+//   });
 
 
 

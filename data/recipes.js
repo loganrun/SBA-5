@@ -46,7 +46,7 @@ const recipes = [
       "id": 6,
       "title": "Lorem Ipsum Sandwich",
       "ingredients": ["Lorem ipsum", "Dolor sit amet", "Consectetur adipiscing elit"],
-      "images": "../images/sandwich.jpeg",
+      "images": "../images/sandwich.jpg",
       "directions": "1. Lorem ipsum dolor sit amet.\n2. Consectetur adipiscing elit.\n3. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
@@ -62,7 +62,7 @@ const recipes = [
       "id": 8,
       "title": "Lorem Ipsum Stir Fry",
       "ingredients": ["Lorem ipsum", "Dolor sit amet", "Consectetur adipiscing elit"],
-      "images": "../images/ver-stir.jpg",
+      "images": "../images/veg-stir.jpg",
       "directions": "1. Lorem ipsum dolor sit amet.\n2. Consectetur adipiscing elit.\n3. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
@@ -86,7 +86,7 @@ const recipes = [
       "id": 11,
       "title": "Spaghetti Carbonara",
       "ingredients": ["200g spaghetti", "2 large eggs", "100g pancetta", "50g grated Parmesan cheese", "Salt and black pepper"],
-      "images": "../images/caderna_pasta.jpg",
+      "images": "../images/caberna_pasta.jpg",
       "directions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget leo ac massa tempor ultricies et id odio."
     },
     {
@@ -126,7 +126,7 @@ const recipes = [
       "id": 16,
       "title": "Caesar Salad",
       "ingredients": ["1 head romaine lettuce", "50g croutons", "25g grated Parmesan cheese", "Caesar dressing"],
-      "images": "../images/caesar_salad.jpg",
+      "images": "../images/ceaser_salad.jpg",
       "directions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget leo ac massa tempor ultricies et id odio."
     },
     {

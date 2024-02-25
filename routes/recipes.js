@@ -8,9 +8,9 @@ const recipes = require("../data/recipes");
 router
 .route("/")
 .get((req, res) => {
-    // res.render("index", { recipes: recipes });
+    res.render("index", { cards: recipes });
     //console.log(recipes)
-    res.json(recipes);
+    //res.json(recipes);
   })
 
   module.exports = router;

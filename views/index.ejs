@@ -10,16 +10,31 @@
  
 
 <body style="background-color: #D1D5DB; padding: 0px; margin:0px;">
-  <nav style=" background-color: #192130; display: flex; text-align: center; align-items: center; justify-content: center; color: white; font-size: 20px; height: 75px; width: 100%;">THE HONEY-DO LIST</nav>
+  <nav style=" background-color: #192130; display: flex; text-align: center; align-items: center; justify-content: center; color: white; font-size: 20px; height: 75px; width: 100%;">Great Eats</nav>
   <div class="container">
     <div class="row">
-      <ul class="list-group list-group-flush" id="todo">
-        <% todos.forEach(todo => { %>
-          <li class="list-group-item"><%= todo %></li>
-        <% }) %>
-      </ul>
-      </div>
+      
+      <% cards.forEach(function(card) { %>
+<div class="col-4" style="margin-top: 50px; margin-right: 120px;margin-left: 70px;">
+    <div class="card" style="width:400px">
+        <img src="<%= card.images %>" class="card-img-top" style="height: 300px; width: 400px;" alt="...">
+        <div class="card-body">
+            <h5 class="card-title"><%= card.title %></h5>
+            <ul class="list-group list-group-flush" id="todo">
+                <% card.ingredients.forEach(function(ingredient) { %>
+                    <li class="list-group-item"><%= ingredient %></li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+</div>
+<% }); %>
+
+    </div>
   </div>
   <%- include('partials/scripts') %>  
 </body>
 </html>
+
+
+
