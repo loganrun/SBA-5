@@ -24,9 +24,10 @@ router
 .post((req, res) => {
   //console.log(req.body.name)
   const user = users.find((u) => u.username == req.body.name)
-  //console.log(user.user_id)
+  //console.log(user)
   const recipe = recipes.filter((r) => r.user_id == user.user_id)
-  res.render("users", { cards: recipe });
+  //console.log(recipe)
+  res.render("users", { cards: recipe, user: user });
   
 })
 

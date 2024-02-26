@@ -13,4 +13,10 @@ router
     //res.json(recipes);
   })
 
+  router
+  .route("/:id")
+  .delete((req, res) => {
+    console.log('delete')
+  })
+
   module.exports = router;

@@ -10,23 +10,23 @@
  
 
 <body style="background-color: #D1D5DB; padding: 0px; margin:0px;">
-  <nav style=" background-color: #192130; display: flex; text-align: center; align-items: center; justify-content: center; color: white; font-size: 20px; height: 75px; width: 100%;">Your Recipes</nav>
+  <nav style=" background-color: #192130; display: flex; text-align: center; align-items: center; justify-content: center; color: white; font-size: 20px; height: 75px; width: 100%;"><%= user.username %>'s Recipes</nav>
   <div class="container">
     <div class="row">
       <div class="col-md-6 offset-md-3" style="margin-top: 75px;">
-        <form action="/api/users" method="post" class="form-inline" id="user">
-          <div class="form-group mx-sm-3">
-            <input type="text" class="form-control" placeholder="Your Recipes - username" id="newItem"> 
-          </div>
-          <button type="submit" class="btn btn-secondary" style="color: white">Login</button>
-        </form>
+        <h1><%= user.name %></h1>
+       
       </div>
       <% cards.forEach(function(card) { %>
 <div class="col-4" style="margin-top: 50px; margin-right: 120px;margin-left: 70px;">
     <div class="card" style="width:400px">
+      <form action="/api/recipes/:id" method="delete" class="form-inline" id="delete" value=<%= card.id %>>
+        <button type="submit" class="btn-close" aria-label="Close">X</button>
+      </form>
         <img src="<%= card.images %>" class="card-img-top" style="height: 300px; width: 400px;" alt="...">
         <div class="card-body">
             <h5 class="card-title"><%= card.title %></h5>
+            
             <ul class="list-group list-group-flush" id="todo">
                 <% card.ingredients.forEach(function(ingredient) { %>
                     <li class="list-group-item"><%= ingredient %></li>
@@ -38,6 +38,9 @@
           <form action="/api/comments" method="get" class="form-inline" id="comments">
             <button type="submit" class="btn btn-secondary" style="color: white">Comments</button>
           </form>
+          <!-- <form action="/api/users" method="get" class="form-inline" id="delete" value=<%= card.id %>>
+            <button type="submit" class="btn-close" aria-label="Close">X</button>
+          </form> -->
           
         </div>
     </div>
