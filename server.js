@@ -14,8 +14,8 @@ app.use('/images', express.static(path.join(__dirname, 'images')));
 
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
+//app.use(bodyParser.json({ extended: true }));
 app.use((req, res, next) => {
   const time = new Date();
   console.log(
