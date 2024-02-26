@@ -1,7 +1,8 @@
+/* 
 body{
-    /* display: flex;
+    display: flex;
     justify-content: center; */
-    /* align-items: center; */
+    /* align-items: center;
     background-color: #D1D5DB;
     padding: 0px;
     margin:0px;
@@ -17,7 +18,7 @@ nav{
     font-size: 20px;
     height: 75px;
     width: 100%;
-}
+} */
 
 .btn-custom {
     background-color: #192130;
