@@ -12,9 +12,9 @@ router
     const { id } = req.params;
     const recipe = recipes.find((r) => r.id == id)
     console.log(recipe)
-    //res.render("comments", { cards: recipe, comments:comments });
-    console.log(id)
-    res.json(comments);
+    res.render("comments", { card: recipe, comments:comments });
+    //console.log(id)
+    //res.json(comments);
   })
 
 module.exports = router;

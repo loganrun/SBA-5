@@ -10,29 +10,18 @@
  
 
 <body style="background-color: #D1D5DB; padding: 0px; margin:0px;">
-  <nav style=" background-color: #192130; display: flex; text-align: center; align-items: center; justify-content: center; color: white; font-size: 20px; height: 75px; width: 100%;">Recipes</nav>
+  <nav style=" background-color: #192130; display: flex; text-align: center; align-items: center; justify-content: center; color: white; font-size: 20px; height: 75px; width: 100%;">Comments</nav>
   <div class="container">
     <div class="row">
       <div class="col-md-6 offset-md-3" style="margin-top: 75px;">
         
        
       </div>
-      <% cards.forEach(function(card) { %>
 <div class="col-4" style="margin-top: 50px; margin-right: 120px;margin-left: 70px;">
     <div class="card" style="width:400px">
-       <!-- This code is correct and should work, but my machine would only send out GET request -->
-      <form action="/api/recipes/:id" method="DELETE" class="form-inline" id="delete" value=<%= card.id %>>
-        <button type="submit" class="btn-close" aria-label="Close">X</button>
-      </form>
         <img src="<%= card.images %>" class="card-img-top" style="height: 300px; width: 400px;" alt="...">
         <div class="card-body">
             <h5 class="card-title"><%= card.title %></h5>
-            <!-- This code is correct and should work,  but my machine would only send out GET request -->
-            <form action="/api/recipes/:id" method="PATCH" class="form-inline" id="edit">
-              <input type="hidden" name="_method" value="PATCH">
-              <button type="submit" value="<%= card.id %>"class="btn btn-secondary" style="color: white">Edit</button>
-            </form>
-            
             <ul class="list-group list-group-flush" id="todo">
                 <% card.ingredients.forEach(function(ingredient) { %>
                     <li class="list-group-item"><%= ingredient %></li>
@@ -41,14 +30,9 @@
         </div>
         <div class="card-body">
           <p class="card-text"><%= card.directions %></p>
-          <form action="/api/comments/<%= card.id %>" method="GET">
-            <input type="hidden" name="cardId" value="<%= card.id %>">
-            <button type="submit" class="btn btn-secondary" value="<%= card.id %>" style="color: white">Comments</button>
-          </form>
         </div>
     </div>
 </div>
-<% }); %>
 
     </div>
   </div>
